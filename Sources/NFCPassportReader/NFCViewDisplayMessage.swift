@@ -26,11 +26,11 @@ extension NFCViewDisplayMessage {
 
         case .authenticatingWithPassport(let progress):
             let percent = max(0, min(100, progress))
-            return "Kimlik doğrulanıyor... %\(percent)"
+            return "%\(percent)"
 
         case .readingDataGroupProgress(_, let progress):
             let percent = max(0, min(100, progress))
-            return "Kimlik okunuyor %\(percent)"
+            return "%\(percent)"
 
         case .error(let tagError):
             switch tagError {
