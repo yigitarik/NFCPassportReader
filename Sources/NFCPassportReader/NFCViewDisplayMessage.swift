@@ -30,7 +30,7 @@ extension NFCViewDisplayMessage {
 
         case .readingDataGroupProgress(_, let progress):
             let progressString = handleProgress(percentualProgress: progress)
-            return "Kimlik okunuyor...\n\n%\(progressString)"
+            return "Kimlik okunuyor %\(progressString)"
 
         case .error(let tagError):
             switch tagError {
